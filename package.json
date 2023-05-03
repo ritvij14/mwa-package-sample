@@ -149,6 +149,7 @@
     ]
   },
   "dependencies": {
+    "@solana-mobile/mobile-wallet-adapter-protocol": "^2.0.0",
     "native-base": "^3.4.28",
     "react-native-safe-area-context": "3.3.2",
     "react-native-svg": "12.1.1"

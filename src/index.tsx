@@ -1,22 +1,23 @@
 import React from 'react';
-import { NativeBaseProvider, Box } from 'native-base';
+import { NativeBaseProvider, Box, Button } from 'native-base';
+import { transact } from '@solana-mobile/mobile-wallet-adapter-protocol';
 
 export const ExampleComponent: React.FC = () => {
   return (
     <Box>
-      <Box
-        alignSelf="center" // bg="primary.500"
-        marginTop="50%"
-        _text={{
-          fontSize: 'md',
-          fontWeight: 'medium',
-          color: 'warmGray.50',
-          letterSpacing: 'lg',
+      <Button
+        onPress={() => {
+          transact(async (mobileWallet) => {
+            const authorization = await mobileWallet.authorize({
+              cluster: 'devnet',
+              identity: { name: 'My Expo App' },
+            });
+            console.log(authorization);
+          });
         }}
-        bg={['red.400', 'blue.400']}
       >
-        This is a Box
-      </Box>
+        Authorize
+      </Button>
     </Box>
   );
 };
