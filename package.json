@@ -15,7 +15,10 @@
     "typescript",
     "npm"
   ],
-  "repository": "https://github.com/candypay/mobile-sdk.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/candypay/mobile-sdk.git"
+  },
   "author": "Ritvij Kumar Sharma <ritvij2001@gmail.com> (https://github.com/ritvij14)",
   "license": "MIT",
   "bugs": {

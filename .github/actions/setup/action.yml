@@ -8,8 +8,10 @@ runs:
       uses: actions/setup-node@v3
       with:
         node-version-file: .nvmrc
+        node-version: "16.x"
+        registry-url: "https://npm.pkg.github.com"
 
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
-      run: yarn
+      run: npm install
       shell: bash
