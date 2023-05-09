@@ -1,25 +1,43 @@
-import React from 'react';
-import { NativeBaseProvider, Box, Button } from 'native-base';
-import { transact } from '@solana-mobile/mobile-wallet-adapter-protocol';
+import React from "react";
+import { transact } from "@solana-mobile/mobile-wallet-adapter-protocol";
+import {
+  Button,
+  StatusBar,
+  StyleSheet,
+  ToastAndroid,
+  View,
+} from "react-native";
 
-export const ExampleComponent: React.FC = () => {
+export const ExampleComponent = () => {
+  const showToast = (msg: string) => {
+    ToastAndroid.show(`Error: ${msg}`, ToastAndroid.SHORT);
+  };
+
   return (
-    <Box>
-      <Button
-        onPress={() => {
+    <Button
+      title="Authorize"
+      onPress={() => {
+        try {
           transact(async (mobileWallet) => {
             const authorization = await mobileWallet.authorize({
-              cluster: 'devnet',
-              identity: { name: 'My Expo App' },
+              cluster: "devnet",
+              identity: { name: "My Expo App" },
             });
             console.log(authorization);
           });
-        }}
-      >
-        Authorize
-      </Button>
-    </Box>
+        } catch (error) {
+          showToast(error as unknown as string);
+        }
+      }}
+    />
   );
 };
 
-export { NativeBaseProvider };
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    paddingTop: StatusBar.currentHeight,
+    backgroundColor: "#6638f0",
+    height: "50%",
+  },
+});

@@ -1,5 +1,21 @@
 {
   "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "skipLibCheck": true
+  },
+  "exclude": ["example"]
+}
+
+/** 
+{
+  "compilerOptions": {
     "baseUrl": "./",
     "paths": {
       "elements-mobile-sdk": ["./src/index"]
@@ -25,3 +41,4 @@
     "target": "esnext"
   }
 }
+*/
