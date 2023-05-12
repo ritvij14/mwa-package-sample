@@ -9,8 +9,9 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "elements-mobile-sdk": "../elements-mobile-sdk-0.tgz",
+    "elements-mobile-sdk": "https://drive.google.com/uc?export=download&id=1dzxOYAY6JSR2uEOdt-jOTMIQS0jTbXtJ",
     "expo": "~48.0.15",
+    "expo-dev-client": "~2.2.1",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.7"
