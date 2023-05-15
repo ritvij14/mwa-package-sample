@@ -9,7 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "elements-mobile-sdk": "https://drive.google.com/uc?export=download&id=1dzxOYAY6JSR2uEOdt-jOTMIQS0jTbXtJ",
+    "elements-mobile-sdk": "https://drive.google.com/uc?export=download&id=1-5EWpzMprBplNl1ks_iii5kiogUr4vuI",
     "expo": "~48.0.15",
     "expo-dev-client": "~2.2.1",
     "expo-status-bar": "~1.4.4",
