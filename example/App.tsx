@@ -2,6 +2,10 @@ import React from "react";
 import { ExampleComponent } from "elements-mobile-sdk";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import { Buffer } from "buffer";
+import * as Crypto from "expo-crypto";
+import "react-native-get-random-values";
+import "react-native-url-polyfill/auto";
 
 export default function App() {
   return (

@@ -1,6 +1,6 @@
 {
   "name": "elements-mobile-sdk",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha",
   "description": "Mobile SDK for @candypay/elements package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "make": "rm -rf ./dist && npm run build && npm pack"
   },
   "keywords": [
     "expo",
@@ -28,13 +29,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "peerDependencies": {
-    "expo": "^48.0.16"
-  },
   "devDependencies": {
     "@types/expo": "^33.0.1",
     "@types/react": "^18.2.6",
-    "expo": "^48.0.16",
+    "expo": "^48.0.17",
     "react-native": "^0.71.7",
     "typescript": "^5.0.4"
   },
@@ -46,6 +44,13 @@
   },
   "packageManager": "^yarn@1.22.15",
   "dependencies": {
-    "@solana-mobile/mobile-wallet-adapter-protocol": "^2.0.0"
+    "@solana-mobile/mobile-wallet-adapter-protocol": "^2.0.0",
+    "@solana/web3.js": "^1.76.0",
+    "bs58": "^5.0.0",
+    "buffer": "^6.0.3",
+    "expo-crypto": "~12.2.1",
+    "js-base64": "^3.7.5",
+    "react-native-get-random-values": "^1.9.0",
+    "react-native-url-polyfill": "^1.3.0"
   }
 }

@@ -1,23 +1,23 @@
-name: CI
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+# name: CI
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
 
-      - name: Setup
-        uses: ./.github/actions/setup
+#       - name: Setup
+#         uses: ./.github/actions/setup
 
-#       - name: Build package
-      - run: npm ci
-      - run: npm publish
-        # run: yarn pack
+# #       - name: Build package
+#       - run: npm ci
+#       - run: npm publish
+#         # run: yarn pack

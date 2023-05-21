@@ -9,12 +9,18 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "elements-mobile-sdk": "https://drive.google.com/uc?export=download&id=1-5EWpzMprBplNl1ks_iii5kiogUr4vuI",
+    "@solana-mobile/mobile-wallet-adapter-protocol": "^2.0.0",
+    "@solana/web3.js": "^1.76.0",
+    "buffer": "^6.0.3",
+    "elements-mobile-sdk": "../elements-mobile-sdk-29.tgz",
     "expo": "~48.0.15",
+    "expo-crypto": "^12.2.2",
     "expo-dev-client": "~2.2.1",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-native": "0.71.7"
+    "react-native": "0.71.7",
+    "react-native-get-random-values": "^1.9.0",
+    "react-native-url-polyfill": "^1.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
